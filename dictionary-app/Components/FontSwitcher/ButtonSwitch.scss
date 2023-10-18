@@ -1,0 +1,18 @@
+.btn__container {
+  width: 7.5rem;
+  left: 8rem;
+  position: relative;
+  bottom: 3rem;
+  display: flex;
+  gap: 1rem;
+}
+.btn_fontSwitcher {
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.font-name {
+    font-size: 12px;
+    font-weight: 700;
+}

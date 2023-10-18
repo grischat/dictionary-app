@@ -1,0 +1,57 @@
+@import "../dictionary-app/src/App.scss";
+
+.fonts__container {
+  position: absolute;
+  background-color: $backgroundColorWhite;
+  top: 2rem;
+  right: 0.5rem;
+  width: 7.4rem;
+  border-radius: 0.5rem;
+  animation: fadeInUp 0.3s ease both;
+  
+}
+
+.font-list {
+  padding-left: 1rem;
+  text-align: start;
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.sans-serif {
+  font-family: $sansSerif;
+  font-weight: 600;
+  transition: color 0.5s;
+  &:hover {
+    color: $purpleElements; // Изменяем цвет текста при наведении
+  }
+}
+.serif {
+  font-family: $serif;
+  font-weight: 600;
+  transition: color 0.5s;
+  &:hover {
+    color: $purpleElements; // Изменяем цвет текста при наведении
+  }
+}
+.mono {
+  font-family: $mono;
+  font-weight: 600;
+  transition: color 0.5s;
+  &:hover {
+    color: $purpleElements; // Изменяем цвет текста при наведении
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    
+  }
+  to {
+    box-shadow: 0 0 10px rgb(139, 139, 139);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
