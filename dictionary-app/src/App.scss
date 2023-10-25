@@ -16,13 +16,9 @@ $mono: "Space Mono", monospace;
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  font-family: $sansSerif;
 }
-h1 {
-    font-family: $sansSerif;
-}
-p {
-    font-family: $sansSerif;
-}
+
 body {
     margin: 0;
 }

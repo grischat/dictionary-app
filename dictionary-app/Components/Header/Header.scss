@@ -1,12 +1,20 @@
 .header__container {
-    position: relative;
-    top: 1.5rem;
-    width: 19rem;
-    height: 3rem;
-    background-color: rgb(250, 250, 250);
-    margin: 1.5rem;
-    margin-top: 0;
+  position: relative;
+  top: 1.5rem;
+  width: 20rem;
+  height: 3rem;
+  background-color: rgb(250, 250, 250);
+  margin: 1rem;
+  margin-top: 0;
 }
-.header__icon{
-    margin: 0.3rem;
+.header__icon {
+  margin: 0.3rem;
+}
+.divider {
+  border-left: 0.08rem solid rgba(221, 221, 221, 0.904);
+  height: 2.2rem;
+  position: relative;
+  bottom: 6rem;
+  width: 0rem;
+  left: 15.7rem;
 }
