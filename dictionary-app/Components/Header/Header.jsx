@@ -1,13 +1,14 @@
 import '../Header/Header.scss'
-import ButtonSwitch from '../FontSwitcher/ButtonSwitch';
-
+import FontSwitch from '../FontSwitcher/FontSwitch';
+import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 const Header = () => {
     
     return (
         <div className="header__container">
             <img className='header__icon' src="../images/logo.svg" alt="Website icon" />
-            <ButtonSwitch />
+            <FontSwitch />
             <div className="divider"></div>
+            <ThemeSwitch></ThemeSwitch>
         </div>
     )
 }

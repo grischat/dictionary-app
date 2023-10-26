@@ -1,4 +1,4 @@
-import "../FontSwitcher/ButtonSwitch.scss";
+import "../FontSwitcher/FontSwitch.scss";
 import { useState } from "react";
 import { useFontContext } from "../Context/FontContext";
 import FontsMenu from "../FontsMenu/FontsMenu";
