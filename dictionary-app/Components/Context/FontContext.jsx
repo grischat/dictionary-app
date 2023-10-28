@@ -9,13 +9,12 @@ export const FontProvider = ({ children }) => {
   const [selectedFont, setSelectedFont] = useState("sans-serif");
   const [fontName, setFontName] = useState("Sans Serif");
   useEffect(() => {
-    
-    if (selectedFont === 'sans-serif') {
-      setFontName('Sans Serif');
-    } else if (selectedFont === 'serif') {
-      setFontName('Serif');
-    } else if (selectedFont === 'monospace') {
-      setFontName('Mono');
+    if (selectedFont === "sans-serif") {
+      setFontName("Sans Serif");
+    } else if (selectedFont === "serif") {
+      setFontName("Serif");
+    } else if (selectedFont === "monospace") {
+      setFontName("Mono");
     }
   }, [selectedFont]);
   const handleFontChange = (font) => {

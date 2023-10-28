@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
 $backgroundColorWhite: #ffffff;
+$backgroundColorBlack: #050505;
 $mainTextColor: #2d2d2d;
+$TextColorDarkMode: #ffffff;
 $input: #f4f4f4;
 $purpleElements: #a445ed;
 $validationText: #ff5252;
+
 
 //Typography
 $sansSerif: "Open Sans", sans-serif;
@@ -22,8 +25,15 @@ $mono: "Space Mono", monospace;
 body {
     margin: 0;
 }
-.container {
+.container-light {
     width: 22rem;
     height: 66.5rem;
-    background-color: rgb(199, 99, 99);
+    background-color: $backgroundColorWhite;
+    color: $mainTextColor
+}
+.container-dark {
+  width: 22rem;
+  height: 66.5rem;
+  background-color: $backgroundColorBlack;
+  color: $TextColorDarkMode;
 }

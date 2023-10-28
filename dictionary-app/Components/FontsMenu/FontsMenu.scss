@@ -1,16 +1,24 @@
 @import "../dictionary-app/src/App.scss";
 
-.fonts__container {
+.fonts__container-light {
   position: absolute;
   background-color: $backgroundColorWhite;
-  top: 2rem;
+  top: 2.4rem;
   right: 0.5rem;
   width: 7.4rem;
   border-radius: 0.5rem;
   animation: fadeInUp 0.3s ease both;
-  
 }
-
+.fonts__container-dark {
+  position: absolute;
+  background-color: $backgroundColorBlack;
+  color: $TextColorDarkMode;
+  top: 2.4rem;
+  right: 0.5rem;
+  width: 7.4rem;
+  border-radius: 0.5rem;
+  animation: fadeInUp 0.3s ease both;
+}
 .font-list {
   padding-left: 1rem;
   text-align: start;
@@ -24,7 +32,7 @@
   font-weight: 600;
   transition: color 0.5s;
   &:hover {
-    color: $purpleElements; // Изменяем цвет текста при наведении
+    color: $purpleElements; 
   }
 }
 .serif {
@@ -32,7 +40,7 @@
   font-weight: 600;
   transition: color 0.5s;
   &:hover {
-    color: $purpleElements; // Изменяем цвет текста при наведении
+    color: $purpleElements; 
   }
 }
 .mono {
@@ -40,7 +48,7 @@
   font-weight: 600;
   transition: color 0.5s;
   &:hover {
-    color: $purpleElements; // Изменяем цвет текста при наведении
+    color: $purpleElements; 
   }
 }
 @keyframes fadeInUp {
