@@ -1,0 +1,30 @@
+@import '../dictionary-app/src/App.scss';
+
+.content__container {
+    margin: 1.5rem;
+    width: 19rem;
+}
+.content__header {
+    position: relative;
+    top: 1rem;
+}
+.header__phonetics {
+    color: $purpleElements;
+}
+.card__content {
+    display: flex;
+    
+    align-items: center;
+    gap: 1rem;
+  }
+  
+.card__name {
+    margin-top: 2.5rem;
+    font-style: italic;
+}
+.card__divider-horizontal {
+    position: relative;
+    top: 0.6rem;
+    border-top: 1px solid #ccc;
+    width: 15rem;
+}
