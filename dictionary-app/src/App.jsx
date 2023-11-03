@@ -8,7 +8,7 @@ import Content from "../Components/Content/Content";
 function App() {
   const { selectedFont } = useFontContext();
   const { defaultTheme } = useThemeContext();
-  const [dataFromSearch, setDataFromSearch] = useState('')
+  const [dataFromSearch, setDataFromSearch] = useState('dictionary')
   const handleDataFromSearch = (data) => {
     setDataFromSearch(data)
   }

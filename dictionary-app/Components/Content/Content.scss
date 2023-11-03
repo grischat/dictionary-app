@@ -1,30 +1,59 @@
-@import '../dictionary-app/src/App.scss';
+@import "../dictionary-app/src/App.scss";
 
 .content__container {
-    margin: 1.5rem;
-    width: 19rem;
+  margin: 1.5rem;
+  width: 19rem;
 }
 .content__header {
-    position: relative;
-    top: 1rem;
+  position: relative;
+  top: 1rem;
 }
 .header__phonetics {
-    color: $purpleElements;
+  color: $purpleElements;
 }
 .card__content {
-    display: flex;
-    
-    align-items: center;
-    gap: 1rem;
-  }
-  
+  display: flex;
+
+  align-items: center;
+  gap: 1rem;
+}
+
 .card__name {
-    margin-top: 2.5rem;
-    font-style: italic;
+  margin-top: 2.5rem;
+  font-style: italic;
 }
 .card__divider-horizontal {
+  position: relative;
+  top: 0.6rem;
+  border-top: 1px solid #ccc;
+  width: 15rem;
+}
+.verb__container {
+  padding-inline-start: 0.5rem;
+}
+.noun__container {
+  padding-inline-start: 0.5rem;
+}
+
+.verb__container, .noun__container {
     position: relative;
-    top: 0.6rem;
-    border-top: 1px solid #ccc;
-    width: 15rem;
+    top: 1.5rem;
+}
+.card__synonyms {
+    position: relative;
+    top: 2rem;
+    color: #757575;
+    .synonym {
+        color: $purpleElements;
+        font-weight: 600;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+.nodata-status {
+    position: relative;
+    opacity: 0.5;
+    top: 1rem;
+    text-decoration: underline;
+
 }

@@ -8,7 +8,7 @@ const Header = () => {
             <img className='header__icon' src="../images/logo.svg" alt="Website icon" />
             <FontSwitch />
             <div className="divider"></div>
-            <ThemeSwitch></ThemeSwitch>
+            <ThemeSwitch/>
         </div>
     )
 }

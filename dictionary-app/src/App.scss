@@ -25,15 +25,18 @@ $mono: "Space Mono", monospace;
 body {
     margin: 0;
 }
+li::marker {
+  color: #8f19e8;
+}
 .container-light {
     width: 22rem;
-    height: 66.5rem;
+    
     background-color: $backgroundColorWhite;
     color: $mainTextColor
 }
 .container-dark {
   width: 22rem;
-  height: 66.5rem;
+  
   background-color: $backgroundColorBlack;
   color: $TextColorDarkMode;
 }
