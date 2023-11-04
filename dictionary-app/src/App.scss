@@ -7,14 +7,12 @@ $input: #f4f4f4;
 $purpleElements: #a445ed;
 $validationText: #ff5252;
 
-
 //Typography
 $sansSerif: "Open Sans", sans-serif;
 $serif: "PT Serif", serif;
 $mono: "Space Mono", monospace;
 :root {
-  background-color: $backgroundColorWhite;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,20 +21,37 @@ $mono: "Space Mono", monospace;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+}
+// * {
+//   box-sizing: border-box;
+//   outline: 1px solid limegreen !important;
+// }
+a:visited {
+  text-decoration: none;
+  color: #2d2d2d;
+  background-color: transparent;
 }
 li::marker {
   color: #8f19e8;
 }
 .container-light {
-    width: 22rem;
-    
-    background-color: $backgroundColorWhite;
-    color: $mainTextColor
+  background-color: $backgroundColorWhite;
+  color: $mainTextColor;
 }
 .container-dark {
-  width: 22rem;
-  
   background-color: $backgroundColorBlack;
   color: $TextColorDarkMode;
+}
+.background-light {
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  background-color: $backgroundColorWhite;
+}
+.background-dark {
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  background-color: $backgroundColorBlack;
 }

@@ -2,6 +2,7 @@ import "../Content/Content.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card/Card";
+
 const Content = ({ searchedData }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -54,10 +55,13 @@ const Content = ({ searchedData }) => {
         ))}
       </ul>
     ));
-    const noData = <span className="nodata-status"><br></br>No data found</span>
+  const noData = (
+    <span className="nodata-status">
+      <br></br>No data found
+    </span>
+  );
   const synonym = data[0].meanings.filter((el) => el.synonyms.length > 0)[0];
 
-  // const synonyms = data[0].meanings[0].synonyms.length > 0 ? data[0].meanings[0].synonyms : data[0].meanings[1].synonyms[0]
   console.log(data);
 
   return (
@@ -72,7 +76,7 @@ const Content = ({ searchedData }) => {
         <Card name={`noun`}>
           {nounDefinitions.length > 0 ? nounDefinitions : noData}
           <p className="card__synonyms">
-          Synonyms:<span> </span> 
+            Synonyms:<span> </span>
             <span className="synonym">{`${
               synonym !== undefined ? synonym.synonyms[0] : "No data found"
             }`}</span>
@@ -81,7 +85,9 @@ const Content = ({ searchedData }) => {
         <Card name={`verb`}>
           {verbDefinitions.length > 0 ? verbDefinitions : noData}
         </Card>
+        
       </div>
+      
     </div>
   );
 };
