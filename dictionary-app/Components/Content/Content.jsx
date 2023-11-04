@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card/Card";
 
-const Content = ({ searchedData }) => {
+const Content = ({ searchedData, setErrorStatus }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  
   useEffect(() => {
     async function fetchData() {
       try {
@@ -17,22 +17,28 @@ const Content = ({ searchedData }) => {
         setData(response.data);
         setLoading(false);
         setError(null);
+        setErrorStatus(null)
       } catch (error) {
         setError(error);
         setLoading(false);
+        setErrorStatus(true)
       }
     }
 
     fetchData();
-  }, [searchedData]);
+  }, [searchedData, setErrorStatus]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   if (error) {
-    return <div>Error: {`Not Found such word`}</div>;
+    return <div className="error">Not Found such word</div>;
   }
+  const playAudio = (audioUrl) => {
+    const audio = new Audio(audioUrl);
+    audio.play();
+  };
   const verbDefinitions = data[0].meanings
     .filter((meaning) => meaning.partOfSpeech === "verb")
     .map((meaning, index) => (
@@ -71,6 +77,20 @@ const Content = ({ searchedData }) => {
         <p className="header__phonetics">
           {data[0].phonetic ? data[0].phonetic : data[0].phonetics[1].text}
         </p>
+        <img
+          className="header__playbtn"
+          src="../images/icon-play.svg"
+          alt="Icon to play audio"
+          onClick={() =>
+            playAudio(
+              data[0].phonetics[0].audio.length > 0
+                ? data[0].phonetics[0].audio
+                : data[0].phonetics[1].audio.length > 0
+                ? data[0].phonetics[1].audio
+                : data[0].phonetics[2].audio
+            )
+          }
+        ></img>
       </div>
       <div className="content__card">
         <Card name={`noun`}>
@@ -85,9 +105,7 @@ const Content = ({ searchedData }) => {
         <Card name={`verb`}>
           {verbDefinitions.length > 0 ? verbDefinitions : noData}
         </Card>
-        
       </div>
-      
     </div>
   );
 };

@@ -33,7 +33,7 @@ a:visited {
   background-color: transparent;
 }
 li::marker {
-  color: #8f19e8;
+  color: $purpleElements;
 }
 .container-light {
   background-color: $backgroundColorWhite;

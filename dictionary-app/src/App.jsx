@@ -10,9 +10,11 @@ import Content from "../Components/Content/Content";
 function App() {
   const { selectedFont } = useFontContext();
   const { defaultTheme } = useThemeContext();
+  const [errorStatus, setErrorStatus] = useState(null);
   const [dataFromSearch, setDataFromSearch] = useState("dictionary");
   const handleDataFromSearch = (data) => {
     setDataFromSearch(data);
+    setErrorStatus(null);
   };
   return (
     <div className={`background-${defaultTheme}`}>
@@ -22,8 +24,12 @@ function App() {
       >
         <Header />
         <SearchBar word={handleDataFromSearch} />
-        <Content searchedData={dataFromSearch} />
-        <Footer link={dataFromSearch} />
+        <Content
+          searchedData={dataFromSearch}
+          setErrorStatus={setErrorStatus}
+        />
+
+        {errorStatus !== true && <Footer link={dataFromSearch} />}
       </div>
     </div>
   );

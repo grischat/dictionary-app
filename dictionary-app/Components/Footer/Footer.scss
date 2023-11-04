@@ -1,9 +1,8 @@
 .footer__container {
-  position: relative;
+  
   width: 18rem;
   height: 8rem;
-  left: 1.5rem;
-  top: 1rem;
+  margin: 1.5rem;
   .footer__source {
     position: relative;
     top: 1.5rem;
@@ -11,6 +10,7 @@
     text-decoration: underline;
   }
   .footer__divider {
+    margin-top: 3.5rem;
     border-top: 1px solid #ccc;
     width: 18rem;
   }
