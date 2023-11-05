@@ -14,7 +14,6 @@ function App() {
   const [dataFromSearch, setDataFromSearch] = useState("dictionary");
   const handleDataFromSearch = (data) => {
     setDataFromSearch(data);
-    setErrorStatus(null);
   };
   return (
     <div className={`background-${defaultTheme}`}>

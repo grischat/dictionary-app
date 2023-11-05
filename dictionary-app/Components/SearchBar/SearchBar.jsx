@@ -5,12 +5,14 @@ import { useState } from "react";
 const SearchBar = ({ word }) => {
   const { defaultTheme } = useThemeContext();
   const { selectedFont } = useFontContext();
-  const [searchValue, setSearchValue] = useState("");
-
+  const [searchValue, setSearchValue] = useState("dictionary");
+  const noInput = <div className="noinput">
+    <p className="noinput_msg">Whoops can`t be empty</p>
+  </div>;
   const handleInputChange = (e) => {
     setSearchValue(e.target.value);
   };
-  
+
   const handleSearchClick = (e) => {
     e.preventDefault();
     word(searchValue);
@@ -35,6 +37,7 @@ const SearchBar = ({ word }) => {
             alt="Search icon"
           />
         </button>
+        {searchValue.length < 1 && noInput}
       </form>
     </div>
   );

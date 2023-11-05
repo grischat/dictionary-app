@@ -6,6 +6,7 @@
   top: 1rem;
   position: relative;
   border-radius: 1rem;
+  
 }
 .search__container-dark {
   background-color: #1f1f1f;
@@ -28,14 +29,32 @@
   height: 2rem;
   width: 12rem;
   font-size: 1rem;
+  font-weight: 700;
 }
 
 .search__button {
-    background-color: transparent;
-    outline: none;
-    position: relative;
-    left: 2.5rem;
-    top: 0.150rem;
-    border: none;
-    cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  left: 2.5rem;
+  top: 0.15rem;
+  border: none;
+  cursor: pointer;
+}
+.noinput {
+  width: 19rem;
+  height: 3rem;
+  position: absolute;
+  bottom: 0;
+  border-radius: 1rem;
+  border: 1px solid #ff0000;
+  background-color: transparent;
+  pointer-events: none;
+  .noinput_msg {
+    position: absolute;
+    left: 0.5rem;
+    top: 2.5rem;
+    font-size: 12px;
+    color: #ff0000ed;
+  }
 }

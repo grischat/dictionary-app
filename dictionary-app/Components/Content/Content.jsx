@@ -7,7 +7,7 @@ const Content = ({ searchedData, setErrorStatus }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -17,11 +17,11 @@ const Content = ({ searchedData, setErrorStatus }) => {
         setData(response.data);
         setLoading(false);
         setError(null);
-        setErrorStatus(null)
+        setErrorStatus(null);
       } catch (error) {
         setError(error);
         setLoading(false);
-        setErrorStatus(true)
+        setErrorStatus(true);
       }
     }
 
@@ -77,20 +77,18 @@ const Content = ({ searchedData, setErrorStatus }) => {
         <p className="header__phonetics">
           {data[0].phonetic ? data[0].phonetic : data[0].phonetics[1].text}
         </p>
-        <img
-          className="header__playbtn"
-          src="../images/icon-play.svg"
-          alt="Icon to play audio"
-          onClick={() =>
-            playAudio(
-              data[0].phonetics[0].audio.length > 0
-                ? data[0].phonetics[0].audio
-                : data[0].phonetics[1].audio.length > 0
-                ? data[0].phonetics[1].audio
-                : data[0].phonetics[2].audio
+        {data[0].phonetics.map(
+          (phonetic, index) =>
+            phonetic.audio.length > 0 && (
+              <img
+                key={index}
+                className="header__playbtn"
+                src="../images/icon-play.svg"
+                alt="Icon to play audio"
+                onClick={() => playAudio(phonetic.audio)}
+              />
             )
-          }
-        ></img>
+        )}
       </div>
       <div className="content__card">
         <Card name={`noun`}>
