@@ -67,7 +67,8 @@ const Content = ({ searchedData, setErrorStatus }) => {
     </span>
   );
   const synonym = data[0].meanings.filter((el) => el.synonyms.length > 0)[0];
-
+  const firstNonEmptyPhoneticAudio = data[0].phonetics.find((phonetic) => phonetic.audio.length > 0);
+  
   console.log(data);
 
   return (
@@ -75,20 +76,17 @@ const Content = ({ searchedData, setErrorStatus }) => {
       <div className="content__header">
         <h1>{searchedData}</h1>
         <p className="header__phonetics">
-          {data[0].phonetic ? data[0].phonetic : data[0].phonetics[1].text}
+          {data[0].phonetic ? data[0].phonetic : 'Phonetic not found'}
         </p>
-        {data[0].phonetics.map(
-          (phonetic, index) =>
-            phonetic.audio.length > 0 && (
+        {firstNonEmptyPhoneticAudio &&  (
               <img
-                key={index}
                 className="header__playbtn"
                 src="../images/icon-play.svg"
                 alt="Icon to play audio"
-                onClick={() => playAudio(phonetic.audio)}
+                onClick={() => playAudio(firstNonEmptyPhoneticAudio.audio)}
               />
             )
-        )}
+        }
       </div>
       <div className="content__card">
         <Card name={`noun`}>

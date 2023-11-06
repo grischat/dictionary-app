@@ -1,8 +1,10 @@
 .footer__container {
-  
   width: 18rem;
   height: 8rem;
   margin: 1.5rem;
+  @media (min-width: 768px) {
+    width: 40rem;
+  }
   .footer__source {
     position: relative;
     top: 1.5rem;
@@ -13,6 +15,12 @@
     margin-top: 3.5rem;
     border-top: 1px solid #ccc;
     width: 18rem;
+    @media (min-width: 768px) {
+      width: 40rem;
+    }
+    @media (min-width: 1440px) {
+      width: 56rem;
+    }
   }
   .footer__link-light {
     position: relative;
@@ -33,4 +41,3 @@
     color: white;
   }
 }
-

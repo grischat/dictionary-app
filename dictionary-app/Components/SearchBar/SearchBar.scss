@@ -6,7 +6,12 @@
   top: 1rem;
   position: relative;
   border-radius: 1rem;
-  
+  @media(min-width: 768px) {
+    width: 40rem;
+  }
+  @media(min-width: 1440px) {
+    width: 57rem;
+  }
 }
 .search__container-dark {
   background-color: #1f1f1f;
@@ -16,6 +21,12 @@
   top: 1rem;
   position: relative;
   border-radius: 1rem;
+  @media(min-width: 768px) {
+    width: 40rem;
+  }
+  @media(min-width: 1440px) {
+    width: 57rem;
+  }
 }
 
 .search__input {
@@ -30,6 +41,12 @@
   width: 12rem;
   font-size: 1rem;
   font-weight: 700;
+  @media(min-width: 768px) {
+    width: 33rem;
+  }
+  @media(min-width: 1440px) {
+    width: 50rem;
+  }
 }
 
 .search__button {
@@ -50,6 +67,12 @@
   border: 1px solid #ff0000;
   background-color: transparent;
   pointer-events: none;
+  @media (min-width: 768px) {
+    width: 40rem;
+  }
+  @media (min-width: 1440px) {
+    width: 57rem;
+  }
   .noinput_msg {
     position: absolute;
     left: 0.5rem;

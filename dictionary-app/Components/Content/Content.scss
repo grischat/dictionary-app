@@ -3,6 +3,12 @@
 .content__container {
   margin: 1.5rem;
   width: 19rem;
+  @media (min-width: 768px) {
+    width: 40rem;
+  }
+  @media (min-width: 1440px) {
+    width: 56rem;
+  }
 }
 .content__header {
   position: relative;
@@ -19,6 +25,12 @@
     border-radius: 2rem;
     background-color: transparent;
     transition: background-color 0.5s;
+    @media (min-width: 768px) {
+      left: 34.9rem;
+    }
+    @media (min-width: 768px) {
+      left: 51.9rem;
+    }
   }
   .header__playbtn:hover {
     background-color: rgba(164, 69, 237, 0.6);
@@ -42,6 +54,12 @@
   top: 0.6rem;
   border-top: 1px solid #ccc;
   width: 15rem;
+  @media (min-width: 768px) {
+    width: 36rem;
+  }
+  @media (min-width: 1440px) {
+    width: 566rem;
+  }
 }
 .verb__container {
   padding-inline-start: 0.5rem;

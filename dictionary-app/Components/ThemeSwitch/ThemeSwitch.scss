@@ -2,4 +2,10 @@
   position: relative;
   bottom: 8rem;
   left: 13.7rem;
+  @media(min-width: 768px) {
+    left: 34.7rem;
+  }
+  @media(min-width: 1440px) {
+    left: 51.7rem;
+  }
 }

@@ -38,10 +38,22 @@ li::marker {
 .container-light {
   background-color: $backgroundColorWhite;
   color: $mainTextColor;
+  @media(min-width: 768px) {
+    width: 40rem;
+  }
+  @media(min-width: 1440px) {
+    width: 60rem;
+  }
 }
 .container-dark {
   background-color: $backgroundColorBlack;
   color: $TextColorDarkMode;
+  @media(min-width: 768px) {
+    width: 40rem;
+  }
+  @media(min-width: 1440px) {
+    width: 60rem;
+  }
 }
 .background-light {
   display: flex;

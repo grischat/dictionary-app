@@ -5,6 +5,12 @@
   height: 3rem;
   margin: 1rem;
   margin-top: 0;
+  @media(min-width: 768px) {
+    width: 40rem;
+  }
+  @media(min-width: 1440px) {
+    width: 60rem;
+  }
 }
 .header__icon {
   margin: 0.3rem;
@@ -16,4 +22,10 @@
   bottom: 6rem;
   width: 0rem;
   left: 13.7rem;
+  @media(min-width: 768px) {
+    left: 34.7rem;
+  }
+  @media(min-width: 1440px) {
+    left: 51.4rem;
+  }
 }
