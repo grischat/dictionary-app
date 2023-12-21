@@ -2,6 +2,7 @@ import "../SearchBar/SearchBar.scss";
 import { useThemeContext } from "../Context/ThemeContext";
 import { useFontContext } from "../Context/FontContext";
 import { useState } from "react";
+import imageSearchIcon from '../../src/images/icon-search.svg'
 const SearchBar = ({ word }) => {
   const { defaultTheme } = useThemeContext();
   const { selectedFont } = useFontContext();
@@ -33,7 +34,7 @@ const SearchBar = ({ word }) => {
         <button type="submit" className="search__button">
           <img
             className="search__icon"
-            src="../images/icon-search.svg"
+            src={imageSearchIcon}
             alt="Search icon"
           />
         </button>

@@ -2,7 +2,7 @@ import "../Content/Content.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card/Card";
-
+import audioIcon from '../../src/images/icon-play.svg'
 const Content = ({ searchedData, setErrorStatus }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -69,7 +69,6 @@ const Content = ({ searchedData, setErrorStatus }) => {
   const synonym = data[0].meanings.filter((el) => el.synonyms.length > 0)[0];
   const firstNonEmptyPhoneticAudio = data[0].phonetics.find((phonetic) => phonetic.audio.length > 0);
   
-  console.log(data);
 
   return (
     <div className="content__container">
@@ -81,7 +80,7 @@ const Content = ({ searchedData, setErrorStatus }) => {
         {firstNonEmptyPhoneticAudio &&  (
               <img
                 className="header__playbtn"
-                src="../images/icon-play.svg"
+                src={audioIcon}
                 alt="Icon to play audio"
                 onClick={() => playAudio(firstNonEmptyPhoneticAudio.audio)}
               />

@@ -2,6 +2,7 @@ import "../FontSwitcher/FontSwitch.scss";
 import { useState } from "react";
 import { useFontContext } from "../Context/FontContext";
 import FontsMenu from "../FontsMenu/FontsMenu";
+import arrowButton from '../../src/images/icon-arrow-down.svg'
 const ButtonSwitch = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const toggleMenu = () => {
@@ -15,7 +16,7 @@ const ButtonSwitch = () => {
       <p className="font-name">{fontName}</p>
       <button className="btn_fontSwitcher" onClick={toggleMenu}>
         {menuOpened && <FontsMenu onFontChange={handleFontChange} />}
-        <img src="../images/icon-arrow-down.svg" alt="Arrow button" />
+        <img src={arrowButton} alt="Arrow button" />
       </button>
     </div>
   );
